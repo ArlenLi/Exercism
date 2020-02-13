@@ -27,7 +27,7 @@ public class HighScores
 
     public List<int> PersonalTopThree()
     {
-        scores.Sort((a, b) => b.CompareTo(a));
-        return scores.Take(3).ToList();
+        var descendingScores = scores.OrderByDescending(s => s);
+        return descendingScores.Take(3).ToList();
     }
 }
