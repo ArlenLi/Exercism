@@ -4,7 +4,7 @@ using System.Linq;
 
 public class HighScores
 {
-    private List<int> scores;
+    public List<int> scores;
     public HighScores(List<int> list)
     {
         scores = list;
@@ -12,7 +12,7 @@ public class HighScores
 
     public List<int> Scores()
     {
-        return scores;
+        return scores.Select(i => i).ToList();
     }
 
     public int Latest()
